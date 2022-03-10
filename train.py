@@ -194,7 +194,8 @@ if __name__ == '__main__':
     data_valid = load_file('data/ted/ted.val')
     data_test = load_file('data/ted/ted.test')
 
-    tokenizer = AutoTokenizer.from_pretrained('neuralmind/bert-base-portuguese-cased', do_lower_case=True)
+    tokenizer = AutoTokenizer.from_pretrained('neuralmind/bert-base-portuguese-cased',
+                                              do_lower_case=True)
 
     print('PREPROCESSING DATA...')
     X_train, y_train = preprocess_data(data_train, tokenizer, punctuation_enc, segment_size)

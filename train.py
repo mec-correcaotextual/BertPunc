@@ -199,7 +199,7 @@ if __name__ == '__main__':
     print('PREPROCESSING DATA...')
     X_train, y_train = preprocess_data(data_train, tokenizer, punctuation_enc, segment_size)
     X_valid, y_valid = preprocess_data(data_valid, tokenizer, punctuation_enc, segment_size)
-    breakpoint()
+
     print('INITIALIZING MODEL...')
     output_size = len(punctuation_enc)
     bert_punc = nn.DataParallel(BertPunc(segment_size, output_size, dropout).cuda())
